@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main ()
+{
+	int a,b,c,temp,mav[50];
+	cout << endl;
+	cout << "ENTER THE ARRAY SIZE: " << flush << endl;
+	cin >> a;
+	cout << endl;
+	cout << "ENTER THE " << a << " ARRAY ELEMENTS:" << endl;
+	
+	for (b=0; b  < a; b++)
+	cin >> mav[b];
+	cout << mav[0] << ", "; 
+
+	cout << endl << endl;
+	for (b=0; b < a; b++)
+	{
+		for (c=0; c < a - b -1; c++)
+		{
+			if (mav[c] > mav [c+1])
+			{
+				temp = mav[c];
+				mav[c] = mav[c+1];
+				mav[c+1] = temp;
+			}
+		}
+	}
+
+	cout << "Elements sorted from lowest to highest" << endl;
+	for (b=0; b<a; b++)
+	cout << mav[b] << ", ";
+
+
+	_getch();
+	return 0;
+}
