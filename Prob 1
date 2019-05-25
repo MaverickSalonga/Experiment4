@@ -1,0 +1,60 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+	int m;
+	double j, k;
+	char l;
+	repeat:
+	
+	cout << endl;
+	cout << "Press [1] for Add" << endl;
+ 	cout << "Press [2] for Subtract" << endl;
+	cout << "Press [3] for Multiply" << endl;
+	cout << "Press [4] for Divide" << endl;
+	cout << "Press [5] for Modulus" << endl << endl;
+	cout << "Enter desired option" << endl;
+	cin >> m;
+	cout << endl;
+	cout << "INPUT 2 NUMBERS: " << endl;
+	cout << "Enter 1st number" << endl;
+	cin >> j;
+	cout << "Enter 2nd number" << endl;
+	cin >> k;
+	
+	if (m == 1)
+	cout << "The sum is = " << j + k << endl;
+	
+	if (m == 2)
+	cout << "The difference is = " << j - k << endl;
+	
+	if (m == 3)
+	cout << "The product is = " << j * k << endl;
+	
+	if (m == 4)
+	cout << "The quotient is = " << j / k << endl;
+	
+	if (m == 5)
+	cout << "The Absolute Value is = " << fabs(j) << ", " << fabs(k) << endl;
+	
+	if (m > 5)
+	cout << "ERROR! Try again!\n" << "press 1 for addition\n" << "press 2 for subtraction\n" << "press 3 for multiplication\n" << "press 4 for division\n" << "press 5 for modulus\n";
+	
+	cout << endl;
+	cout << "Do you want to continue? Press (y) if yes and (n) if no:  " ;
+	cin >> l;
+	
+	if(l=='y' && l=='Y')
+	system("cls");
+	goto repeat;
+		
+	if(l=='n' && l=='N')
+	cout << "Thank you!";
+	cout << endl;
+	
+	
+	return 0;
+}
